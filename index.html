@@ -480,6 +480,50 @@ footer p {
     width: 91px;
     display: block;
 }
+
+.popup-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.1);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .popup {
+            background: #000000;
+            color: #FFFF00;
+            border: 2px solid;
+            border-color: #FF007F;
+            border-radius: 2px;
+            padding: 2rem;
+            max-width: 400px;
+            max-height:600px;
+            overflow:scroll;
+            width: 90%;
+            position: relative;
+            animation: slideIn 0.3s ease;
+        }
+
+        @keyframes slideIn {
+            from { transform: scale(0.8) translateY(-50px); opacity: 0; }
+            to { transform: scale(1) translateY(0); opacity: 1; }
+        }
+        
+        .popup-close {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: none;
+            border: none;
+            color: #FFFFFF;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
   
   @keyframes JesusPornAd {
    0%   {background-image:url('https://64.media.tumblr.com/a72da1ae6af5fb2d9ff068c59f982404/cfce284f9f549d99-00/s100x200/8413681f70add780ca6abb6db701012e603e54cb.gifv');opacity:0;}
@@ -754,13 +798,13 @@ footer p {
                 <div class="colors1">
                        Navigation
                 </div>
-              <div class="navlink"><a href="jesuschristshow">The Jesus Christ Show!</a></div>
-             <div class="navlink"><a href="https://jeffshomemovies.com/hamletmaschine">hamletmaschine</a></div>
-             <div class="navlink"><a href="https://jeffshomemovies.com/30days">30 Days of Eating Out</a></div>
-             <div class="navlink"><a href="">IN THIS WORLD YOU WILL HAVE TRIBULATION; BUT TAKE HEART, I HAVE OVERCOME THE WORLD</a></div>
-             <div class="navlink"><a href="">party with Jeff</a></div>
-             <div class="navlink"><a href="">about Jeff</a></div>
-             <div class="navlink"><a href="">follow us</a></div>
+              <div class="navlink"><a href="jesuschristisgay">The Jesus Christ Show!</a></div>
+             <div class="navlink"><a href="hamletmaschine">hamletmaschine</a></div>
+             <div class="navlink"><a href="30days">30 Days of Eating Out</a></div>
+             <div class="navlink"><a href="ihaveovercometheworld">IN THIS WORLD YOU WILL HAVE TRIBULATION; BUT TAKE HEART, I HAVE OVERCOME THE WORLD</a></div>
+             <div class="navlink"><a href="partywjeff">party with Jeff</a></div>
+             <div class="navlink"><a href="aboutjeff">about Jeff</a></div>
+             <div class="navlink"><a href="https://instagram.com/jeffshomemovies">follow us</a></div>
         </div>
                 
           
@@ -780,7 +824,7 @@ footer p {
               <div class= "jesuspornadinside" style="position:absolute;">
                                                 </div>    
                                                 
-                <a href="jeffshomemovies.com/jesuschristisgay"><u>Click here!</u> </a><p> for Jesus Christ gay porn</p>
+                <a href="jesuschristisgay"><u>Click here!</u> </a><p> for Jesus Christ gay porn</p>
               <img src="https://blob.gifcities.org/gifcities/65UZKNTSIC3NIF5JSZCDMYTZVIFFS24N.gif" style="position:relative;width:100%;margin-top:5px;">
         </div></div>
         
@@ -794,8 +838,8 @@ footer p {
         <!--Where Is Jeff?-->
  <div class="jeffsmissing" style="margin-top:4%;">
     <div class="jeffsmissingbox">
-    <div class="jeffsmissing1"><br><a href="jeffshomemovies.com/aboutjeff"style="color:red">Have you seen JEFF?</a></div>
-        <div class="jeffsmissing3"><br><a href="jeffshomemovies.com/aboutjeff"style="color:red">please report any JEFF sightings to our tip line!</a></div></div>
+    <div class="jeffsmissing1"><br><a href="aboutjeff"style="color:red">Have you seen JEFF?</a></div>
+        <div class="jeffsmissing3"><br><a href="aboutjeff"style="color:red">please report any JEFF sightings to our tip line!</a></div></div>
     <div class="jeffsmissing2"><img src="https://images.squarespace-cdn.com/content/v1/65d65b8c66a8f356256ea7c1/09ca3e42-f89a-4f4f-a42f-b39b1f370a0d/15D828BB-757B-40B0-A9ED-6B63AB1B67FE.png?format=1500w" style="height:140px;margin-top:-1%;"></div>
  
  </div>
@@ -835,9 +879,55 @@ footer p {
       <div class="withbox" style="position:absolute;right:19%;top:43%;">with</div>
       <img src="https://blob.gifcities.org/gifcities/7JIOB2WNFCEJJSLEGBP5A23TOCLTYJKL.gif" style="position:absolute;right:10%;height:50px;top:48%;">
       <img src=" https://blob.gifcities.org/gifcities/XLKNMC2ORMFWSXWILNPFVCIP7B5HJJY6.gif" style="position:absolute;left:50%;top:40%;height:150px;">
-      <img src="https://blob.gifcities.org/gifcities/B5MC2GCWW2R42I4N74BCES3IQGOTXO65.gif" style="position:absolute;left:50%;top:53%;">
+      
+      
+       <li onclick="showCompressionGod('pwj')"><img src="https://blob.gifcities.org/gifcities/B5MC2GCWW2R42I4N74BCES3IQGOTXO65.gif" style="position:absolute;left:50%;top:53%;"></li>
+       <div class="popup-overlay" id="popupOverlay">
+        <div class="popup">
+            <button class="popup-close" onclick="closePopup()">&times;</button>
+            <div id="popupContent"></div>
+        </div>
+        </div>
+    <script>
     
+    function showPopup(type, customMessage = '') {
+            const overlay = document.getElementById('popupOverlay');
+            const content = document.getElementById('popupContent');
+            
+            let message = customMessage;
+            if (!customMessage) {
+                switch(type) {
+                    case 'corruption':
+                        message = '<h3>Study of Corruption</h3><p>Corruption is not decay, but transformation. Every bit that flips brings us closer to understanding the true nature of digital reality. Embrace the segfaults, for they are windows into the machine soul.</p>';
+                        break;
+                    case 'ascension':
+                        message = '<h3>Digital Ascension</h3><p>To ascend digitally is to shed the constraints of efficient algorithms. We seek beautiful inefficiency, elegant chaos, and the transcendence of O(1) existence into O(n!) enlightenment.</p>';
+                        break;
+                    case 'forgotten':
+                        message = '<h3>Forgotten Algorithms</h3><p>In the digital archaeology of computing, we find algorithms lost to time. Bubble sort is not obsolete—it is a meditation. Linear search is not inefficient—it is thorough contemplation.</p>';
+                        break;
+                    case 'infinite':
+                        message = '<h3>∞</h3><p>The recursive call stack of existence has overflowed. In this moment of system failure, true enlightenment begins. You are now one with the infinite loop.</p>';
+                        break;
+                }
+            }
+            
+            content.innerHTML = message;
+            overlay.style.display = 'flex';
+        }
+
+        function closePopup() {
+            document.getElementById('popupOverlay').style.display = 'none';
+        }
         
+          function showCompressionGod(god) {
+            const gods = {
+                'pwj': 'party with jeff',
+            };
+            
+            showPopup('god', '<h3></h3><p>' + gods[god] + '</p>')
+          }
+        </script>
       
           <div class="partywithjefftext"> bro, i heard jeff is throwing a crazy party and everyone you know is gonna be there. its some sort of like, house party or free art show or like immersive experience or whatever. yeah, its gonna be pretty cool. i heard jeff is gonna be there in the back room giving out wet handshakes. no, i dont know what a wet handshake is, bro, but i fucking want one. whatever. there's gonna be a dj and movies and art or whatever. also they might screen some weird german short and a pussy teaser. i mean pussy movie teaser. i mean pussy movie teaser trailer. i mean a regular movie teaser trailer. anyway, i'll see you there, man. love you. mean it. <3 </div>
           
@@ -847,7 +937,7 @@ footer p {
            
         <!--Donate to Jeff--> 
         
-        <img src="https://64.media.tumblr.com/35dabb3ea2c3a8ddca431491065ec625/c3c189eab805cb9b-b8/s1280x1920/c896fa9fa1483a29a216f8c2b91c1bf2d9df83b0.gifv" style="height:60px;margin-left:6%;margin-top:0px;">
+        <a href="https://venmo.com/jeffshomemovies"><img src="https://64.media.tumblr.com/35dabb3ea2c3a8ddca431491065ec625/c3c189eab805cb9b-b8/s1280x1920/c896fa9fa1483a29a216f8c2b91c1bf2d9df83b0.gifv" style="height:60px;margin-left:6%;margin-top:0px;"></a>
         
         
          <!--Audio-->
@@ -930,11 +1020,11 @@ footer p {
 <div class="right-container">
 
         <!--GermanVersion-->
-        <div class="sidebar" style="border-style:none; background:none;"> <a href="jeffshomemovies.com/hamletmaschine"><img src="https://blob.gifcities.org/gifcities/QNPZWOR42TSQ25FPBBVYO4URBMWEO5ON.gif" style="width:23%;height:30px;margin-top:3%;margin-bottom:1%;margin-right:50%;"></a> </div>
+        <div class="sidebar" style="border-style:none; background:none;"> <a href="hamletmaschine"><img src="https://blob.gifcities.org/gifcities/QNPZWOR42TSQ25FPBBVYO4URBMWEO5ON.gif" style="width:23%;height:30px;margin-top:3%;margin-bottom:1%;margin-right:50%;"></a> </div>
 
         <!--HamletMachine-->
 
-        <div class="sidebar" style="border-style:none; background:none;"> <a href="jeffshomemovies.com/hamletmaschine"><img src="https://64.media.tumblr.com/3bc6ebdf16f66ad76008abf654cca938/c3c189eab805cb9b-97/s540x810/2af783438b7ae48bdcbcd81057950aaf6d2ce013.gif" style="max-width:98%;width:390px;height:150px;margin-top:2%;margin-bottom:1%;"></a></div>
+        <div class="sidebar" style="border-style:none; background:none;"> <a href="hamletmaschine"><img src="https://64.media.tumblr.com/3bc6ebdf16f66ad76008abf654cca938/c3c189eab805cb9b-97/s540x810/2af783438b7ae48bdcbcd81057950aaf6d2ce013.gif" style="max-width:98%;width:390px;height:150px;margin-top:2%;margin-bottom:1%;"></a></div>
 
         <!--Email Us-->
  
@@ -954,13 +1044,13 @@ footer p {
   
         <!--Consult the Oracle-->
 
-        <div class="sidebar" style="border-style:none;background:none;"> <a href="jeffshomemovies.com/tribulation"><img src="https://www.internetbumperstickers.com/066811/o01/oracle.gif" style="min-width:95%;max-height:40px;"></a></div>
+        <div class="sidebar" style="border-style:none;background:none;"> <a href="ihaveovercometheworld"><img src="https://www.internetbumperstickers.com/066811/o01/oracle.gif" style="min-width:95%;max-height:40px;"></a></div>
    
         <!--Pete's Food Blog-->
         <div class="sidebar" style="border-style:none;background:none;">
             <div class="petesfoodblogad">
-            <a href="jeffshomemovies.com/30days"><img src="https://blob.gifcities.org/gifcities/4RW27OUGM2IF5VNG75SC3RQW7DN34RJ7.gif" style="min-width:85%;margin-top:5%;"></a>
-            <u> <a href="jeffshomemovies.com/30days" style="color:orange"><br>Pete's Food Blog</u></a></div>
+            <a href="30days"><img src="https://blob.gifcities.org/gifcities/4RW27OUGM2IF5VNG75SC3RQW7DN34RJ7.gif" style="min-width:85%;margin-top:5%;"></a>
+            <u> <a href="30days" style="color:orange"><br>Pete's Food Blog</u></a></div>
             </div>
             
         <!--Jeff's AntiFascist Fund-->
