@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>30 Days of Eating Out</title>
+    <link href="/style.css" rel="stylesheet" type="text/css" media="all">
+    <link rel="icon" type="image/x-icon" href="https://64.media.tumblr.com/f68688c8d33d9dbb8d2b6a1d382be72d/c33c5d167245742d-a5/s75x75_c1/1c1c8db99b6250426943350599ff7f0771b7f297.gifv">
+  </head>
+  <body>
+  
+            <!-- THIS IS THE CSS !-->
+        <style>
+            
+
+          
+    */
+
+            @font-face {
+                font-family: Nunito;
+                src: url('https://sadhost.neocities.org/fonts/Nunito-Regular.ttf');
+            }
+
+            @font-face {
+                font-family: Nunito;
+                src: url('https://sadhost.neocities.org/fonts/Nunito-Bold.ttf');
+                font-weight: bold;
+            }
+
+            @font-face {
+                font-family: Nunito;
+                src: url('https://sadhost.neocities.org/fonts/Nunito-Italic.ttf');
+                font-style: italic;
+            }
+
+            @font-face {
+                font-family: Nunito;
+                src: url('https://sadhost.neocities.org/fonts/Nunito-BoldItalic.ttf');
+                font-style: italic;
+                font-weight: bold;
+            }
+
+            
+            
+            
+            
+            
+            
+            
+            body {
+                font-family: 'Nunito', sans-serif;
+                margin: 0;
+                background-color: #fff8e3;
+                width:100%;
+                background-size: 65px;
+                color: #5c1901;
+                -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+
+
+
+            #websitecontainer {
+              min-width: 950px;
+    margin-left: auto;
+    margin-right: auto;
+              
+            }
+            
+            
+            #container {
+                max-width: 900px;
+                /* this is the width of your layout! */
+                /* if you change the above value, scroll to the bottom
+      and change the media query according to the comment! */
+                margin: 0 auto;
+                /* this centers the entire page */
+            }
+
+            /* the area below is for all links on your page
+    EXCEPT for the navigation */
+            #container a {
+                color: #f5740a;
+                font-weight: bold;
+                /* if you want to remove the underline
+      you can add a line below here that says:
+      text-decoration:none; */
+            }
+
+            #header {
+                width: 100%;
+                background-color: #b02900;
+                
+                height: 150px;
+                
+                background-image: var(--header-image);
+                background-size: 100%;
+            }
+
+            /* navigation section!! */
+            #navbar {
+                height: 40px;
+                background-color: #b02900;
+                /* navbar color */
+                width: 100%;
+            }
+
+            #navbar ul {
+                display: flex;
+                padding: 0;
+                margin: 0;
+                list-style-type: none;
+                justify-content: space-evenly;
+            }
+
+            #navbar li {
+                padding-top: 10px;
+            }
+
+            /* navigation links*/
+            #navbar li a {
+                color: #f59264;
+                
+                font-weight: 800;
+                text-decoration: none;
+                /* this removes the underline */
+            }
+
+            /* navigation link when a link is hovered over */
+            #navbar li a:hover {
+                color: #a49cba;
+                text-decoration: underline;
+            }
+
+            #flex {
+                display: flex;
+            }
+
+            /* this colors BOTH sidebars
+    if you want to style them separately,
+    create styles for #leftSidebar and #rightSidebar */
+            aside {
+                background-color: #f5f5f5;
+                width: 200px;
+                padding: 20px;
+                font-size: smaller;
+                /* this makes the sidebar text slightly smaller */
+            }
+
+
+            /* this is the color of the main content area,
+    between the sidebars! */
+            main {
+                background-color: #f7af94;
+                flex: 1;
+                padding: 20px;
+                order: 2;
+            }
+
+            /* what's this "order" stuff about??
+    allow me to explain!
+    if you're using both sidebars, the "order" value
+    tells the CSS the order in which to display them.
+    left sidebar is 1, content is 2, and right sidebar is 3! */
+
+            */ #leftSidebar {
+                order: 1;
+            }
+
+            #rightSidebar {
+                order: 3;
+            }
+
+            footer {
+                background-color: #942c00;
+                /* background color for footer */
+                width: 100%;
+                height: 40px;
+                padding: 10px;
+                text-align: center;
+                font-size:13px;
+                /* this centers the footer text */
+            }
+
+            h1,
+            h2,
+            h3 {
+                color: #b53202;
+            }
+
+            h1 {
+                font-size: 25px;
+            }
+
+            strong {
+                /* this styles bold text */
+                color: #802301;
+            }
+
+            /* this is just a cool box, it's the darker colored one */
+            .box {
+                background-color: #f7af94;
+                border: 1px solid #ED64F5;
+                padding: 10px;
+            }
+
+            /* CSS for extras */
+
+            #topBar {
+                width: 100%;
+                height: 30px;
+                padding: 10px;
+                font-size: smaller;
+                background-color: #13092D;
+            }
+
+
+            /* BELOW THIS POINT IS MEDIA QUERY */
+
+            /* so you wanna change the width of your page? 
+    by default, the container width is 900px.
+    in order to keep things responsive, take your new height,
+    and then subtrack it by 100. use this new number as the 
+    "max-width" value below
+    */
+
+           
+            }
+        </style>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <div id="websitecontainer">
+            
+            <div id="container">
+            <div id="headerArea">
+                
+                
+            <nav id="navbar" style="margin-bottom: 0px;"><ul>
+                <li><a href="#">Latest Review</a></li>
+                <li><a href="#">Top 5 Date Spots</a></li>
+                <li><a href="#">My new Movie</a></li>
+                <li><a href="#">About Pete</a></li>
+                <li><a href="#">Rituals</a></li>
+                <li><a href="/">Back to Jeff</a></li>
+              </ul></nav></div>
+
+            <div id="flex">
+                
+                <main>
+                    <h1>Welcome to Petey's little corner of cyberspace.......</h1>
+                   <p><strong>In the beginning,</strong> when the world was new and nothing had a name, my mother made me cinnamon buns. I never knew how she did it, raising me and my brothers after our dad moved to Santorini, but she always made sure there was food on the table. And boy! What a full table it was; yet it was hard being in a set of triplets. </p>
+                   
+                   <figure><img src="https://64.media.tumblr.com/556a960749b3f32528f0048d07dc3979/5996789ce579fa88-2d/s1280x1920/c39eadc2984199ff2c5bde51d502af3b158fdf0a.jpg" style="height:200px;margin-left:20%;"> <figcaption style="margin-left:34%;font-size:11px;">me and my two stupid twin brothers</figcaption> </figure>
+
+                <p>There was nothing that was just mine. We would fight like junkyard dogs, as boys do, over who could get seconds. Rarely did I come out on top, Benji was always the biggest of us La Bia boys, but the magic of food never left me. Of course life has a funny way of getting in the way. </p>
+
+              <p>I never even tasted the cake on my wedding day. I knew it was chocolate buttercream and I knew it was a premier pastry chef my wife met abroad in Amsterdam. I knew it was expensive. I really did want something fruitier, but Jen didn't trust my instincts. Men don't get food like us girls, she told me. Now stay out of the kitchen. Sometimes I think if I gave in, really let myself try it, really put my foot down for some strawberries on top, Jen would still be here. </p>
+              
+              <figure><img src="https://i.pinimg.com/564x/a4/05/1d/a4051dfe53d6db53e3c3dbe11ee9d08d.jpg" style="height:250px;margin-left:35%;"> <figcaption style="margin-left:40%;font-size:11px;">jens fruitless cake</figcaption> </figure>
+
+          <p>For a long time I thought that's just not me. I thought I was just some guy from Long Island who would never be able to appreciate a complex dish like a pastrami and swiss or fish and chips (hold the tartar sauce). Would I ever really understand what my mom was putting into all those meals before heading off to her shift at the university hospital? Maybe my father just couldn't resist the allure of a perfectly garnished watermelon feta salad? Was this what that pastry chef from The Netherlands had that I didn't? The secrets of the world were on the tip of my tongue but I couldn't seem to pick them out from the stovetop mac and cheese I made every night. Maybe everyone was right about me, maybe I'm just some loser who doesn't know the difference between kraft and velveeta. I believed it so it became true. Until now. </p>
+          
+          <figure><img src="https://files.catbox.moe/c7ba3c.png" style="height:200px;margin-left:20%;"> <figcaption style="margin-left:30%;font-size:11px;">still from my new documentary starring me :)</figcaption> </figure>
+
+          <p>I'm documenting this journey, this exploration of eating for my mother. For all mothers. For Jen, I'll show you there's more to this world than chocolate buttercream. For my father, a wayward foodie just like me. Most of all this blog is for the little boy who always wanted that extra cinnamon bun, but never got it.</p>
+
+
+                </main>
+                
+            <aside id="leftSidebar">
+            
+            <img src="https://dn720005.ca.archive.org/0/items/rotatingfood5/giphy%20%281%29%20%282%29.gif" style="height:110px;margin-top:-5px;margin-bottom:-5px;">
+            <h2>Pete's Reviews</h2>
+            <div class="box">
+                
+                <ul style="margin-left:-10px;list-style-image: url('https://i1225.photobucket.com/albums/ee381/enix-directory/Pixels/042102_1227_394_prv.gif');">
+                    <li>June 15th - <a href="">The Cat's Table</a></li>
+                    <li>June 17th - <a href="">Snatched Roof</a></li>
+                    <li>June 23rd - <a href="">Hole in the Wall</a></li>
+                    <li>June 25th - <a href="">Pam's Clams</a></li>
+                    <li>July 1st - <a href="">Other Name</a></li>
+                    <li>July 3rd - <a href="">Other Name</a></li>
+                </ul>
+            </div>
+            <br>
+            <img src="https://dn720005.ca.archive.org/0/items/rotatingfood5/giphy%20%2874%29.gif" style="height:75px;margin-top:5px;">
+            <p>
+            <h3>Other Links</h3>
+            <ul style="margin-left:-10px;list-style-image: url('https://blob.gifcities.org/gifcities/3KQNTABHWTB5DGF47BCDQGLKEWY6EORX.gif');">
+                <li><a href="">My Hinge Profile</a>
+                </li><li><a href="" target="_blank">Meditation Playlist</a></li>
+                <li><a href="">Info about Wim Hoff</a></li>
+                <li><a href="">Booch</a></li>
+                <li><a href="">My Stupid Brother's Podcast</a></li>
+            </ul>
+            <img src="https://dn720005.ca.archive.org/0/items/rotatingfood5/giphy%20%2824%29.gif" style="height:90px;margin-top:15px;">
+            </aside>
+            
+            </div>
+            <footer id="footer" style="margin-top: 0px;">summer 2026</footer>
+        </div>
+
+    </div>
+  </body>
+</html>
