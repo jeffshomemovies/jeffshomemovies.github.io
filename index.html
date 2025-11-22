@@ -176,6 +176,12 @@ z-index:100;
   background-color: HotPink;
   color:yellow;
 }
+
+   mark2 {
+  background-color: yellow;
+  color:#0297fa;
+  
+}
            
 .partywithjeff {
   height: 330px;
@@ -882,55 +888,9 @@ footer p {
       <img src="/assets/party.gif" style="position:absolute;left:50%;top:40%;height:150px;">
       
       
-       <li onclick="showCompressionGod('pwj')"><img src="/assets/clickhere.gif" style="position:absolute;left:50%;top:53%;"></li>
-       <div class="popup-overlay" id="popupOverlay">
-        <div class="popup">
-            <button class="popup-close" onclick="closePopup()">&times;</button>
-            <div id="popupContent"></div>
-        </div>
-        </div>
-    <script>
-    
-    function showPopup(type, customMessage = '') {
-            const overlay = document.getElementById('popupOverlay');
-            const content = document.getElementById('popupContent');
-            
-            let message = customMessage;
-            if (!customMessage) {
-                switch(type) {
-                    case 'corruption':
-                        message = '<h3>Study of Corruption</h3><p>Corruption is not decay, but transformation. Every bit that flips brings us closer to understanding the true nature of digital reality. Embrace the segfaults, for they are windows into the machine soul.</p>';
-                        break;
-                    case 'ascension':
-                        message = '<h3>Digital Ascension</h3><p>To ascend digitally is to shed the constraints of efficient algorithms. We seek beautiful inefficiency, elegant chaos, and the transcendence of O(1) existence into O(n!) enlightenment.</p>';
-                        break;
-                    case 'forgotten':
-                        message = '<h3>Forgotten Algorithms</h3><p>In the digital archaeology of computing, we find algorithms lost to time. Bubble sort is not obsolete—it is a meditation. Linear search is not inefficient—it is thorough contemplation.</p>';
-                        break;
-                    case 'infinite':
-                        message = '<h3>∞</h3><p>The recursive call stack of existence has overflowed. In this moment of system failure, true enlightenment begins. You are now one with the infinite loop.</p>';
-                        break;
-                }
-            }
-            
-            content.innerHTML = message;
-            overlay.style.display = 'flex';
-        }
-
-        function closePopup() {
-            document.getElementById('popupOverlay').style.display = 'none';
-        }
-        
-          function showCompressionGod(god) {
-            const gods = {
-                'pwj': 'party with jeff',
-            };
-            
-            showPopup('god', '<h3></h3><p>' + gods[god] + '</p>')
-          }
-        </script>
+       <a href="https://www.eventbrite.com/e/party-with-jeff-tickets-1969958397597"><img src="/assets/clickhere.gif" style="position:absolute;left:50%;top:53%;"></a>
       
-          <div class="partywithjefftext"> <mark>bro, i heard jeff is throwing a crazy party and everyone you know is gonna be there. its some sort of like, house party or free art show or like immersive experience or whatever. yeah, its gonna be pretty cool. i heard jeff is gonna be there in the back room giving out wet handshakes. no, i dont know what a wet handshake is, bro, but i fucking want one. whatever. there's gonna be a dj and movies and art or whatever. also they might screen some weird german short and a pussy teaser. i mean pussy movie teaser. i mean pussy movie teaser trailer. i mean a regular movie teaser trailer. anyway, i'll see you there, man. love you. mean it. <3 </mark></div>
+          <div class="partywithjefftext"> <mark2>bro, i heard jeff is throwing a crazy party and everyone you know is gonna be there. its some sort of like, house party or free art show or like immersive experience or whatever. yeah, its gonna be pretty cool. i heard jeff is gonna be there in the back room giving out wet handshakes. no, i dont know what a wet handshake is, bro, but i fucking want one. whatever. there's gonna be a dj and movies and art or whatever. also they might screen some weird german short and a pussy teaser. i mean pussy movie teaser. i mean pussy movie teaser trailer. i mean a regular movie teaser trailer. anyway, i'll see you there, man. love you. mean it. <3 </mark2></div>
           
           
         </div>
