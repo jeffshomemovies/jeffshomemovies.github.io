@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1450px, height=800px,  maximum-scale=1.0, minimum-scale=1.0, target-densityDpi=device-dpi">
+    <title>Jeff's Bedroom</title>
+    <style>
+        
+
+        body {
+            font-family: 'Source Code Pro', monospace;
+             background-image:url('https://images.steamusercontent.com/ugc/254839288193954902/2DC3733B997C0349FAD29C98CC0007C52975C550/?imw=5000&imh=5000&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false');
+             background-size: 101%;
+            color: var(--corrupted-green);
+            overflow-x: hidden;
+            position: fixed;
+        }
+        
+        .popup-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.1);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .popup {
+            background: #000000;
+            color: #FFFF00;
+            border: 2px solid;
+            border-color: #FF007F;
+            border-radius: 2px;
+            padding: 2rem;
+            max-width: 400px;
+            max-height:600px;
+            overflow:scroll;
+            width: 90%;
+            position: relative;
+            animation: slideIn 0.3s ease;
+        }
+
+        @keyframes slideIn {
+            from { transform: scale(0.8) translateY(-50px); opacity: 0; }
+            to { transform: scale(1) translateY(0); opacity: 1; }
+        }
+        
+        .popup-close {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: none;
+            border: none;
+            color: #FFFFFF;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+
+
+  </style>
+</head>
+<body>
+
+<a href="https://jesuschristisgay.neocities.org/"> <img src="https://blob.gifcities.org/gifcities/6E44UPZTRJDDS6QKV34RO5VI5GYHZVG7.gif" style="position:absolute;top:0px;left:0px;"></a>
+
+
+
+ <li onclick="showCompressionGod('jeff')"><img src="https://blob.gifcities.org/gifcities/JG54XKFCP4WTSRNNNPTNSCKGBTK37KHU.gif" style="position:absolute;top:155px;left:490px"></li>
+                    <li onclick="showCompressionGod('friends')"> <img src="https://web.archive.org/web/20091022044602im_/http://www.geocities.com/icarus2sun/frame.gif" style="height:150px;position:absolute;top:120px;left:1165px"></li>
+                    <li onclick="showCompressionGod('upcoming')"><img src="https://blob.gifcities.org/gifcities/5M32LU3GIGUFW3XGCPC7PFV5PZWVM66C.gif" style="height:170px;position:absolute;top:190px;left:255px"></li>
+                    <li onclick="showCompressionGod('founder')"><img src="https://web.archive.org/web/20091022095953im_/http://www.geocities.com/musician_in_residence/LavaLamp03.gif" style="height:80px;position:absolute;top:320px;right:-990px"> </li>
+                     <li onclick="showCompressionGod('rle')"><img src=""></li>
+    
+                        
+                    
+                    <div class="popup-overlay" id="popupOverlay">
+        <div class="popup">
+            <button class="popup-close" onclick="closePopup()">&times;</button>
+            <div id="popupContent"></div>
+        </div>
+    </div>
+
+<script>
+
+ function showPopup(type, customMessage = '') {
+            const overlay = document.getElementById('popupOverlay');
+            const content = document.getElementById('popupContent');
+            
+            let message = customMessage;
+            if (!customMessage) {
+                switch(type) {
+                    case 'corruption':
+                        message = '<h3>Study of Corruption</h3><p>Corruption is not decay, but transformation. Every bit that flips brings us closer to understanding the true nature of digital reality. Embrace the segfaults, for they are windows into the machine soul.</p>';
+                        break;
+                    case 'ascension':
+                        message = '<h3>Digital Ascension</h3><p>To ascend digitally is to shed the constraints of efficient algorithms. We seek beautiful inefficiency, elegant chaos, and the transcendence of O(1) existence into O(n!) enlightenment.</p>';
+                        break;
+                    case 'forgotten':
+                        message = '<h3>Forgotten Algorithms</h3><p>In the digital archaeology of computing, we find algorithms lost to time. Bubble sort is not obsolete—it is a meditation. Linear search is not inefficient—it is thorough contemplation.</p>';
+                        break;
+                    case 'infinite':
+                        message = '<h3>∞</h3><p>The recursive call stack of existence has overflowed. In this moment of system failure, true enlightenment begins. You are now one with the infinite loop.</p>';
+                        break;
+                }
+            }
+            
+            content.innerHTML = message;
+            overlay.style.display = 'flex';
+        }
+
+        function closePopup() {
+            document.getElementById('popupOverlay').style.display = 'none';
+        }
+        
+          function showCompressionGod(god) {
+            const gods = {
+                'friends': '<h1> jeffs darlings </h1> Jordan Chase<p> Uri Zerbib<p> Jesse <p> Steve <p> Ava <p> <h1> friends of Jeff </h1>',
+                'rle': 'RLE - The Repetition Oracle: "Count the same, compress the mundane. In boring sequences, find beauty."',
+                'upcoming': 'upcoming jeff projects',
+                'founder': 'As collaborators, White and Lipowitz have a strong creative dynamic dominated by technical skill and a clear, shared vision. Lipowitz is filled with unique and (admittedly) insane ideas by the dozens, while Haley’s skills as an editor create a world where the ideas can be intelligibly organized. Additionally, the two are both plagued with the same sense of humor shared by 12-year-old boys and unemployed stoners alike, which makes for fun, goofy, and sometimes offensive writing room sessions that yield wildly funny, irreverent, and effective comedy scripts.<h2>Annelise Lipowitz</h2> (Producer) is a multidisciplinary technician and artist based in Brooklyn, NY. Originally from Las Vegas, NV, Annelise has been enthusiastically involved in entertainment from a young age; dabbling in interests from classical piano to competitive synchronized swimming to stop-motion animation throughout childhood and tween-dom. They became increasingly interested in theatre and film throughout their young adulthood and graduated with a BFA in Theatre Arts with a concentration in acting from Montclair State University while beginning their professional theatre career in Philadelphia, New Jersey, and New York, as well as self-producing several student short films and live theatrical workshops and productions. Post-grad, Annelise has continued working professionally in theatre, film, and television. They’ve spent most of their professional career as a theatrical technician in wardrobe, costume design, electric, lighting, props, and construction, as well as several far less impressive film production assistant jobs, both on set and in office, with studios like Netflix, A24, and an ad agency you haven’t heard of. While working professionally as a technician, Lipowitz has continued producing several personal projects, including their first full-length play, a (nearly complete) short film Die Hamletmaschine, several fine art works created both independently and with collaboration, and a directorial project with frequent collaborator, actor/writer Natalie Roman - a proof of concept for Roman’s unique and surreal coming-of-age story: (201).<h2>Haley White</h2>(Producer) is a writer, editor, and artist based in Brooklyn, NY. Emerging into the publishing industry after graduating from the University of Central Florida with a BA in English and completing the Masters level publishing certification at University of Denver, Haley has worked professionally at several publication houses including Legacy Book and Triplicity Publishing. In recent years, White has shifted their focus into more personal projects, including pop-culture lit-crit, personal essays and poetry, and mixed media fine art in illustration, painting, sculpture, and textiles.',
+                'jeff': '<h1>more about JEFF </h1><p> JEFF has been making movies since the dawn of man. The very concept of what we now know as cinema is all thanks to JEFF. We owe it all to JEFF. <p> JEFF’s style can be described as “bizarre” and “unappealing” and “not at all marketable”. JEFF is a perfect genius and the only filmmaker alive. <p> JEFF will continue living for the remainder of infinite time. Just as the horrors shall never cease, so shan’t JEFF. <p> If you find JEFF, please, tell him we miss him. We just want him to come home. But we understand why he had to take this journey and we appreciate his continued support as Executive Producer at JEFF’s home movies :) llc'
+            };
+            
+            showPopup('god', '<h3></h3><p>' + gods[god] + '</p>')
+          }
+        
+
+ </script>
+ 
+</body>
+</html>
