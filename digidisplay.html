@@ -1,0 +1,150 @@
+ <!DOCTYPE html>
+<html>
+    <head>
+         <meta charset="UTF-8">
+         <script src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-rc.2/lazyload.js"></script>
+          <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>DigiArt</title>
+    <link rel="icon" type="image/x-icon" href="https://i.imgur.com/ns2UdGe.gif">
+  <style>
+    
+    
+    /*--STYLESHEET--*/
+    
+    body {
+    background-color: black;
+    background-image: url("https://64.media.tumblr.com/e2ffb47ddaeb8a7859faa979c4ef90b4/147bfebdf112f180-66/s400x600/1d84aa576f1e32d0ab1f18d99f7392e34b74b557.gif");
+    color: #5e5e5e;
+    font-family: "Comic Sans MS", Lato, Verdana;
+    margin: 0px;
+    position: relative;
+    height: auto;
+    width: 100%;
+  
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+.maincontainer {
+   width:1150px;
+            
+            height: auto;
+            
+            flex-wrap: wrap;
+   
+    position: absolute;
+           }
+
+.scroll-container {
+  background-color: rgba(90, 62, 255, 0.25);
+  overflow: auto;
+  height: 120px;
+  width: 110%; 
+  display:flex;
+  margin:20px;
+   margin-left:8%;
+   border-color:rgba(239, 255, 61, 1);
+  border-style:dashed;
+             border-width: thin;
+             border-radius:20px;
+  
+}
+
+.scroll-container img {
+  height:90px;
+  margin: 5px;
+  padding: 10px;
+  
+ 
+}
+
+
+
+.display-container {
+  height:650px;
+  width:100%;
+  margin-left:13%;
+  border-color:#4102bf;
+  border-style:dotted;
+             border-width: medium;
+             border-radius:20px; z-index: -10;margin-top:5px;
+  
+}
+
+
+</style>  
+ <body>  
+ 
+ 
+
+ 
+ <!--INDEX-->
+ 
+<main>
+</main>
+
+ <div class="maincontainer">
+         
+         
+         <div class="display-container">
+         
+         <img id="img" src="https://64.media.tumblr.com/c6b1b212e44a060c152852d8c9b04b21/fda3d8350a497341-9a/s540x810/3e25c54133178664b5301e90c0ef7c68c8293013.pnj" style="max-height:640px;max-width:100%; position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    
+    margin: auto;">
+         <p id="text">text 
+
+
+         </div>
+             
+             
+<div class="scroll-container">
+    
+  <div id="thumb_img">
+  
+    <img src='/assets/assets2/lessthanthree.png'  onclick='changeImage("/assets/assets2/lessthanthree.png");changeText("(less than three)")'>
+    
+    <img src='/assets/assets2/laughing'  onclick='changeImage("");changeText("laughing")'>
+    
+    <img src='/assets/assets2/doppleganger'  onclick='changeImage("");changeText("doppleganger")'>
+
+      <img src='/assets/assets2/remembering'  onclick='changeImage("");changeText("remembering")'>
+
+      <img src='/assets/assets2/stayasyouare'  onclick='changeImage("");changeText("stay as you are")'>
+
+      <img src='/assets/assets2/themeeting'  onclick='changeImage("");changeText("the meeting")'>
+
+      <img src='/assets/assets2/thoughtloops'  onclick='changeImage("");changeText("thought loops")'>
+
+      <img src='/assets/assets2/attentionseeker'  onclick='changeImage("");changeText("attention seeker")'>
+
+      <img src='/assets/assets2/'  onclick='changeImage("");changeText("")'>
+      <img src='/assets/assets2/'  onclick='changeImage("");changeText("")'>
+
+      <img src='/assets/assets2/'  onclick='changeImage("");changeText("")'>
+
+    
+     
+</div>
+
+
+</div>
+
+<script>
+
+function changeImage(a) {
+        document.getElementById("img").src=a;
+    }
+    
+function changeText(name) {
+document.getElementById("text").innerHTML = name;
+}
+        
+</script>
+
+</body>
+</html>
