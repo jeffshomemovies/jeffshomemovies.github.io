@@ -38,8 +38,8 @@
 
 .scroll-container {
   background-color: rgba(90, 62, 255, 0.25);
-  overflow-x: scroll;
-  
+  overflow-x:scroll;
+    overflow-y:hidden; 
   height: 120px;
   width: 110%; 
   display:block;
@@ -50,6 +50,10 @@
              border-width: thin;
              border-radius:20px;
   
+}
+
+#innercontainer{
+    width:3000px;  
 }
 
 .scroll-container img {
@@ -97,9 +101,10 @@
          </div>
              
              
-<div class="scroll-container">
+<div id="scroll-container">
+ <div id="innercontainer">
     
-  <div id="thumb_img">
+    <div id="thumb_img">
   
     <img src='assets/assets2/lessthan3.png'  onclick='changeImage("assets/assets2/lessthan3.png");changeText("(less than three)")'>
     
@@ -135,7 +140,7 @@
 
     
     
-     
+    </div>     
 </div>
 
 
