@@ -1,0 +1,815 @@
+ <!DOCTYPE html>
+<html>
+    <head>
+         <meta charset="UTF-8">
+         <script src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-rc.2/lazyload.js"></script>
+          <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Party with Jeff! Map</title>
+    <link rel="icon" type="image/x-icon" href="https://i11.photobucket.com/albums/a168/evelynregly/mini_gifs/mini_gifs88.gif">
+    
+    
+  <style>
+
+:root {
+  
+  --text-color: #c8fa02; 
+
+  
+  --font: Arial, sans-serif;
+  --heading-font: Georgia, serif;
+  --font-size: 14px;
+
+  
+  --margin: 10px;
+  --padding: 20px;
+  --border: 2px solid #000000;
+  --border-radius:10px;
+  --sidebar-width: 200px;
+}
+
+a:link {
+  color: yellow;
+  text-decoration: underline;
+}
+
+a:visited {
+  color: #c202b5;
+}
+
+a:hover,
+a:focus {
+  color: #0283e6;
+  text-decoration: none;
+}
+
+::selection {
+  
+  background: rgba(0, 0, 0, 0.2);
+}
+
+mark {
+ 
+  text-shadow: 1px 1px 4px var(--link-color);
+  background-color: inherit;
+  color: var(--text-color);
+}
+
+/*--MAIN CSS--*/
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  min-height: 100vh;
+  font-size: var(--font-size);
+  margin: 0;
+  padding: var(--margin);
+  color: var(--text-color);
+  font-family: var(--font);
+  line-height: 1.2;
+  background-image: url("https://64.media.tumblr.com/3179f7442b705ee227326b1e90ca3dc9/tumblr_inline_mll17n8Dlz1r53miq.png");
+  
+  
+}
+
+
+.layout {
+  width: 1000px;
+  display: grid;
+  grid-gap: var(--margin);
+  grid-template: "header" auto "main" auto "section2" auto "section2" auto "section3" auto "section4" auto "footer" auto / auto;
+}
+
+main {
+  grid-area: main;
+  overflow-y: auto;
+  padding: var(--padding);
+  background: rgb(0, 36, 38, .8);
+  border: var(--border);
+  border-radius: var(--border-radius);
+}
+
+.sectionb {
+  overflow-y: auto;
+  padding: var(--padding);
+  color: #f54ea0;
+  background: rgb(61, 0, 30, .8);
+  border: 2px solid #240012;
+  border-radius: var(--border-radius);
+}
+
+.sectionc {
+  overflow-y: auto;
+  padding: var(--padding);
+  background: rgb(1, 1, 54, .8);
+  color: #5b79fc;
+  border: 2px solid #ebfa7a;
+  border-radius: var(--border-radius);
+}
+
+.sectiond {
+  overflow-y: auto;
+  padding: var(--padding);
+  background: rgb(252, 233, 134, .8);
+  color: #57020e;
+  border: 2px solid #57020e;
+  border-radius: var(--border-radius);
+}
+
+.sectione {
+  overflow-y: auto;
+  padding: var(--padding);
+  background: rgb(255, 87, 235, .8);
+  border: 2px solid #ffbdf7;
+  color: #ffbdf7;
+  border-radius: var(--border-radius);
+}
+
+.artcontainer {
+  width:100%;
+  height:150px;
+  border: var(--border);
+  display:flex;
+  flex:row;
+}
+
+.artsection {
+  width:25%;
+  height:148px;
+  border-right-style: solid;
+  border-width:2px;
+  border-color:black;
+  display:block;
+}
+
+
+header {
+  grid-area: header;
+  font-size: 1.2em;
+  
+  border: 2px solid #c8fa02;
+  border-radius:10px;
+  background-color: rgb(158, 255, 31, .4);
+  
+}
+
+.header-content {
+  padding: var(--padding);
+}
+
+.header-title {
+  font-family: var(--heading-font);
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+
+
+/*-- NAVIGATION --*/
+
+
+nav {
+  margin-bottom: 3em;
+  margin-left:15%;
+  
+}
+
+nav .sidebar-title {
+  margin-bottom: 0.5em;
+}
+
+nav ul {
+  margin-right: 10px;
+  padding: 0;
+  list-style: none;
+  user-select: none;
+}
+
+nav ul li {
+  margin-bottom: 0;
+}
+
+nav > ul li > a,
+nav > ul li > strong {
+  display: inline-block;
+}
+
+nav > ul li > a,
+nav > ul li > details summary,
+nav > ul li > strong {
+  padding: 5px 10px;
+}
+
+nav > ul li > a.active,
+nav > ul li > details.active summary {
+  font-weight: bold;
+}
+
+nav ul summary {
+  cursor: pointer;
+}
+
+nav ul ul li > a {
+  padding-left: 30px;
+}
+
+header nav {
+  margin-bottom: 0;
+}
+
+header nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+}
+
+header nav ul li {
+  position: relative;
+}
+
+header nav ul li:first-child > a {
+  padding-left: 0;
+}
+
+header nav ul li:last-child > a {
+  padding-right: 0;
+}
+
+
+/*-- CONTENT --*/
+
+
+main {
+  line-height: 1.5;
+}
+
+main a,
+main a:visited {
+  color: var(--link-color);
+}
+
+main a:hover,
+main a:focus {
+  color: var(--link-color-hover);
+  text-decoration-style: wavy;
+}
+
+main p,
+main .image,
+main .full-width-image,
+main .two-columns {
+  margin: 0.75em 0;
+}
+
+main ol,
+main ul {
+  margin: 0.5em 0;
+  padding-left: 1.5em;
+}
+
+main ol li,
+main ul li {
+  margin-bottom: 0.2em;
+  line-height: 1.3;
+}
+
+main ol {
+  padding-left: 2em;
+}
+
+main blockquote {
+  background: rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  margin: 1em 0;
+  border-radius: 10px;
+}
+
+main pre {
+  margin: 1em 0 1.5em;
+}
+
+main code {
+  text-transform: none;
+}
+
+main center {
+  margin: 1em 0;
+  padding: 0 1em;
+}
+
+main hr {
+  border: 0;
+  border-top: var(--border);
+  margin: 1.5em 0;
+}
+
+/* HEADINGS: */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--heading-font);
+  margin-bottom: 0;
+  line-height: 1.5;
+}
+
+h1:first-child,
+h2:first-child,
+h3:first-child,
+h4:first-child,
+h5:first-child,
+h6:first-child {
+  margin-top: 0;
+}
+
+h1 {
+  font-size: 1.5em;
+}
+
+h2 {
+  font-size: 1.4em;
+}
+
+h3 {
+  font-size: 1.3em;
+}
+
+h4 {
+  font-size: 1.2em;
+}
+
+h5 {
+  font-size: 1.1em;
+}
+
+h6 {
+  font-size: 1em;
+}
+
+
+.image {
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+}
+
+.full-width-image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.images {
+  display: flex;
+  width: calc(100% + 5px + 5px);
+  margin-left: -5px;
+  margin-right: -5px;
+}
+
+.images img {
+  width: 100%;
+  height: auto;
+  padding: 5px;
+  margin: 0;
+  overflow: hidden;
+}
+
+
+footer {
+  grid-area: footer;
+  border: var(--border);
+  border-radius: var(--round-borders);
+  overflow: hidden;
+  font-size: 0.75em;
+  padding: 15px;
+  background: var(--content-background-color);
+  display: flex;
+  justify-content: center;
+}
+
+footer a,
+footer a:visited {
+  color: var(--link-color);
+}
+
+footer a:hover,
+footer a:focus {
+  color: var(--link-color-hover);
+}
+
+/* -------------------------------------------------------- */
+/* MOBILE RESPONSIVE */
+/* -------------------------------------------------------- */
+
+/* CSS Code for devices < 800px */
+@media (max-width: 800px) {
+  body {
+    font-size: 14px;
+  }
+
+  .layout {
+    width: 100%;
+    grid-template: "header" auto "main" auto "section2" auto "section2" auto "section3" auto "section4" auto "footer" auto / auto;
+  }
+
+
+  aside {
+    border-bottom: 1px solid;
+    padding: 9px;
+    font-size: 0.9em;
+  }
+
+  
+  nav {
+    padding: 0;
+  }
+
+  nav > ul {
+    padding-top: 0.5em;
+  }
+
+  nav > ul li > a,
+  nav > ul li > details summary,
+  nav > ul li > strong {
+    padding: 0.5em;
+  }
+
+  main {
+    max-height: none;
+    padding: 15px;
+  }
+
+  .images {
+    flex-wrap: wrap;
+  }
+
+  .images img {
+    width: 100%;
+  }
+
+  
+}
+
+  
+  </style>
+  
+  
+  </head>
+  <body>
+
+  <div class="layout">
+  
+  
+  <!-- NAVIGATION -->
+  
+     <header>
+        <div class="header-content">
+	      <h2 style="color:#013621;">˚⟡˖ ࣪welcome 2 the party˚⟡ </h2>
+	        <nav>
+	          <ul>
+	            <li><a href="#a"><img src="https://64.media.tumblr.com/adf0f0790341ded0cbb1c261727c95a3/539fedd976cf8516-a0/s75x75_c1/26d739407fc0c312d23f9f5e70472b7dbd92436c.gifv" style="height:30px;"></a></li>
+	            <li><a href="#b"><img src="https://64.media.tumblr.com/092a92f773c3d4fac8ab152cef12345d/58ded37d3f32f207-6e/s75x75_c1/b48dbe80b62294150b1d9aa46f9c1b816e2dd448.gifv" style="height:30px;"></a></li>
+	            <li><a href="#c"><img src="https://64.media.tumblr.com/96e106114bf9d2c24173bd7a634891c3/tumblr_inline_npk063u2GI1ry72eo_75sq.gifv" style="height:30px;"></a></li>
+	            <li><a href="#d"><img src="https://64.media.tumblr.com/74aa33029b9781677e39eec975fa0faf/60cf046bc237d1fe-d6/s75x75_c1/e81f84c509d15e0166c8528c2e9e54c7f1c5f6d6.gifv" style="height:30px;"></a></li>
+	            <li><a href="#e"><img src="https://64.media.tumblr.com/fd6ecf2eb5db8668cc87257d55fc7682/tumblr_inline_pkbnsnZR281ry72eo_75sq.gifv" style="height:30px;"></a></li>
+	          </ul>
+	        </nav>
+        </div>
+      </header>
+
+	  
+	
+      
+  
+      <main id="content"> 
+
+        
+
+
+
+        <section>
+
+          <h1 id="a">SECTION <img src="https://64.media.tumblr.com/adf0f0790341ded0cbb1c261727c95a3/539fedd976cf8516-a0/s75x75_c1/26d739407fc0c312d23f9f5e70472b7dbd92436c.gifv" style="height:30px;"></h1>
+         
+         <h2>Artist Name</h2>
+          <a href="">social media link</a>
+          <p> artist bio
+          <br>
+          <div class="artcontainer"> 
+            <div class="artsection"> picture </div> 
+            <div class="artsection"> name</div>
+            <div class="artsection"> materials & size  </div> 
+            <div class="artsection" style="border-style:none;"> price</div>
+            </div>
+            <p>
+             <div class="artcontainer"> 
+            <div class="artsection"> </div> 
+            <div class="artsection"> </div>
+            <div class="artsection"> </div> 
+            <div class="artsection" style="border-style:none;"> </div>
+          
+          
+          
+          </div>
+        <p>
+        <p>
+          
+          <img src="https://64.media.tumblr.com/56f2e8e716a43e0c7b3ff0565b89ed9a/c0ec5d5755c014b6-0c/s640x960/9a9044973f660697aba68f7fab5c61ceba63c9b8.gifv" style="width:100%">
+
+
+ <h2>Artist Name</h2>
+          <a href="">social media link</a>
+          <p> artist bio
+          <br>
+          <div class="artcontainer"> 
+            <div class="artsection"> picture</div> 
+            <div class="artsection"> name</div>
+            <div class="artsection"> materials & size  </div> 
+            <div class="artsection" style="border-style:none;"> price</div>
+            </div>
+            <p>
+             <div class="artcontainer"> 
+            <div class="artsection"> </div> 
+            <div class="artsection"> </div>
+            <div class="artsection"> </div> 
+            <div class="artsection" style="border-style:none;"> </div>
+          
+          
+          
+          </div>
+        <p>
+        <p>
+          
+          <img src="https://64.media.tumblr.com/56f2e8e716a43e0c7b3ff0565b89ed9a/c0ec5d5755c014b6-0c/s640x960/9a9044973f660697aba68f7fab5c61ceba63c9b8.gifv" style="width:100%">
+        
+
+        </section>
+        
+        
+       
+        
+        
+        
+      </main>
+      
+ <div class="sectionb"> 
+ 
+  <h1 id="b">SECTION <img src="https://64.media.tumblr.com/092a92f773c3d4fac8ab152cef12345d/58ded37d3f32f207-6e/s75x75_c1/b48dbe80b62294150b1d9aa46f9c1b816e2dd448.gifv" style="height:30px;"></h1>
+         
+         <h2>Artist Name</h2>
+          <a href="">social media link</a>
+          <p> artist bio
+          <br>
+          <div class="artcontainer"> 
+            <div class="artsection"> picture </div> 
+            <div class="artsection"> name </div>
+            <div class="artsection"> materials & size </div> 
+            <div class="artsection" style="border-style:none;"> price</div>
+            </div>
+            <p>
+             <div class="artcontainer"> 
+            <div class="artsection"> </div> 
+            <div class="artsection"> </div>
+            <div class="artsection"> </div> 
+            <div class="artsection" style="border-style:none;"> </div>
+          
+          
+          
+          </div>
+        <p>
+        <p>
+          
+          <img src="https://64.media.tumblr.com/56f2e8e716a43e0c7b3ff0565b89ed9a/c0ec5d5755c014b6-0c/s640x960/9a9044973f660697aba68f7fab5c61ceba63c9b8.gifv" style="width:100%">
+
+
+ <h2>Artist Name</h2>
+          <a href="">social media link</a>
+          <p> artist bio
+          <br>
+          <div class="artcontainer"> 
+            <div class="artsection"> picture </div> 
+            <div class="artsection"> name </div>
+            <div class="artsection"> materials & size </div> 
+            <div class="artsection" style="border-style:none;"> price</div>
+            </div>
+            <p>
+             <div class="artcontainer"> 
+            <div class="artsection"> </div> 
+            <div class="artsection"> </div>
+            <div class="artsection"> </div> 
+            <div class="artsection" style="border-style:none;"> </div>
+          
+          
+          
+          </div>
+        <p>
+        <p>
+          
+          <img src="https://64.media.tumblr.com/56f2e8e716a43e0c7b3ff0565b89ed9a/c0ec5d5755c014b6-0c/s640x960/9a9044973f660697aba68f7fab5c61ceba63c9b8.gifv" style="width:100%">
+ 
+ 
+ 
+ </div>
+ 
+ 
+ 
+ <div class="sectionc"> 
+  <h1 id="c">SECTION <img src="https://64.media.tumblr.com/96e106114bf9d2c24173bd7a634891c3/tumblr_inline_npk063u2GI1ry72eo_75sq.gifv" style="height:30px;"></h1>
+         
+         <h2>Artist Name</h2>
+          <a href="">social media link</a>
+          <p> artist bio
+          <br>
+          <div class="artcontainer"> 
+            <div class="artsection"> picture </div> 
+            <div class="artsection"> name </div>
+            <div class="artsection"> materials & size </div> 
+            <div class="artsection" style="border-style:none;"> price</div>
+            </div>
+            <p>
+             <div class="artcontainer"> 
+            <div class="artsection"> </div> 
+            <div class="artsection"> </div>
+            <div class="artsection"> </div> 
+            <div class="artsection" style="border-style:none;"> </div>
+          
+          
+          
+          </div>
+        <p>
+        <p>
+          
+          <img src="https://64.media.tumblr.com/56f2e8e716a43e0c7b3ff0565b89ed9a/c0ec5d5755c014b6-0c/s640x960/9a9044973f660697aba68f7fab5c61ceba63c9b8.gifv" style="width:100%">
+
+
+ <h2>Artist Name</h2>
+          <a href="">social media link</a>
+          <p> artist bio
+          <br>
+          <div class="artcontainer"> 
+            <div class="artsection"> picture </div> 
+            <div class="artsection"> name </div>
+            <div class="artsection"> materials & size </div> 
+            <div class="artsection" style="border-style:none;"> price</div>
+            </div>
+            <p>
+             <div class="artcontainer"> 
+            <div class="artsection"> </div> 
+            <div class="artsection"> </div>
+            <div class="artsection"> </div> 
+            <div class="artsection" style="border-style:none;"> </div>
+          
+          
+          
+          </div>
+        <p>
+        <p>
+          
+          <img src="https://64.media.tumblr.com/56f2e8e716a43e0c7b3ff0565b89ed9a/c0ec5d5755c014b6-0c/s640x960/9a9044973f660697aba68f7fab5c61ceba63c9b8.gifv" style="width:100%">
+ 
+ 
+ 
+ </div>
+ 
+ 
+ 
+ <div class="sectiond"> 
+ 
+ <h1 id="d">SECTION <img src="https://64.media.tumblr.com/74aa33029b9781677e39eec975fa0faf/60cf046bc237d1fe-d6/s75x75_c1/e81f84c509d15e0166c8528c2e9e54c7f1c5f6d6.gifv" style="height:30px;"></h1>
+         
+         <h2>Artist Name</h2>
+          <a href="">social media link</a>
+          <p> artist bio
+          <br>
+          <div class="artcontainer"> 
+            <div class="artsection"> picture </div> 
+            <div class="artsection"> name </div>
+            <div class="artsection"> materials & size </div> 
+            <div class="artsection" style="border-style:none;"> price</div>
+            </div>
+            <p>
+             <div class="artcontainer"> 
+            <div class="artsection"> </div> 
+            <div class="artsection"> </div>
+            <div class="artsection"> </div> 
+            <div class="artsection" style="border-style:none;"> </div>
+          
+          
+          
+          </div>
+        <p>
+        <p>
+          
+          <img src="https://64.media.tumblr.com/56f2e8e716a43e0c7b3ff0565b89ed9a/c0ec5d5755c014b6-0c/s640x960/9a9044973f660697aba68f7fab5c61ceba63c9b8.gifv" style="width:100%">
+
+
+ <h2>Artist Name</h2>
+          <a href="">social media link</a>
+          <p> artist bio
+          <br>
+          <div class="artcontainer"> 
+            <div class="artsection"> picture </div> 
+            <div class="artsection"> name </div>
+            <div class="artsection"> materials & size </div> 
+            <div class="artsection" style="border-style:none;"> price</div>
+            </div>
+            <p>
+             <div class="artcontainer"> 
+            <div class="artsection"> </div> 
+            <div class="artsection"> </div>
+            <div class="artsection"> </div> 
+            <div class="artsection" style="border-style:none;"> </div>
+          
+          
+          
+          </div>
+        <p>
+        <p>
+          
+          <img src="https://64.media.tumblr.com/56f2e8e716a43e0c7b3ff0565b89ed9a/c0ec5d5755c014b6-0c/s640x960/9a9044973f660697aba68f7fab5c61ceba63c9b8.gifv" style="width:100%">
+ 
+ 
+ </div>
+ 
+ 
+ <div class="sectione"> 
+ 
+ <h1 id="e">SECTION <img src="https://64.media.tumblr.com/fd6ecf2eb5db8668cc87257d55fc7682/tumblr_inline_pkbnsnZR281ry72eo_75sq.gifv" style="height:30px;"></h1>
+         
+         <h2>Artist Name</h2>
+          <a href="">social media link</a>
+          <p> artist bio
+          <br>
+          <div class="artcontainer"> 
+            <div class="artsection"> picture </div> 
+            <div class="artsection"> name </div>
+            <div class="artsection"> materials & size </div> 
+            <div class="artsection" style="border-style:none;"> price</div>
+            </div>
+            <p>
+             <div class="artcontainer"> 
+            <div class="artsection"> </div> 
+            <div class="artsection"> </div>
+            <div class="artsection"> </div> 
+            <div class="artsection" style="border-style:none;"> </div>
+          
+          
+          
+          </div>
+        <p>
+        <p>
+          
+          <img src="https://64.media.tumblr.com/56f2e8e716a43e0c7b3ff0565b89ed9a/c0ec5d5755c014b6-0c/s640x960/9a9044973f660697aba68f7fab5c61ceba63c9b8.gifv" style="width:100%">
+
+
+ <h2>Artist Name</h2>
+          <a href="">social media link</a>
+          <p> artist bio
+          <br>
+          <div class="artcontainer"> 
+            <div class="artsection"> picture </div> 
+            <div class="artsection"> name </div>
+            <div class="artsection"> materials & size </div> 
+            <div class="artsection" style="border-style:none;"> price</div>
+            </div>
+            <p>
+             <div class="artcontainer"> 
+            <div class="artsection"> </div> 
+            <div class="artsection"> </div>
+            <div class="artsection"> </div> 
+            <div class="artsection" style="border-style:none;"> </div>
+          
+          
+          
+          </div>
+        <p>
+        <p>
+          
+          <img src="https://64.media.tumblr.com/56f2e8e716a43e0c7b3ff0565b89ed9a/c0ec5d5755c014b6-0c/s640x960/9a9044973f660697aba68f7fab5c61ceba63c9b8.gifv" style="width:100%">
+ 
+ 
+ 
+ </div>
+
+    
+
+      <footer>
+           
+      </footer>
+  
+    
+    </div>
+
+
+    
+  </body>
+</html>
