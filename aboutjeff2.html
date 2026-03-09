@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html>
+<head>
+      <link rel="icon" type="image/x-icon" href="">
+       <meta name="viewport" content="width=1450px, height=700px,  maximum-scale=1.0, minimum-scale=1.0, target-densityDpi=device-dpi">
+      <title>Jeff's Bedroom</title>
+<style>
+
+* {
+    cursor: url(), default;
+}
+
+body {
+    background-image: url(https://64.media.tumblr.com/61dd27857062726b202ee30f26f2715e/048bc3389166c886-a7/s1280x1920/198d55d9d5ad304c7e8990321f9b41c811b30aca.jpg);
+    background-size: 102%;
+    overflow: hidden;
+}
+
+.filter {
+  filter: saturate(2) brightness(1) contrast(1) opacity(1);
+  -webkit-filter: saturate(2) brightness(1) contrast(1) opacity(1);
+}
+
+.room {
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 40px;
+    left: 50px;
+    transform: scale(1.1);
+}
+
+.desk {
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 90px;
+    left: 580px;
+    transform: scale(1.2);
+}
+
+.text {
+    opacity: 0;
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    transform: translate(+20%, +20%);
+    font-size: 20px;
+    color: rgb(255, 224, 124);
+    font-family: "5PT5";
+    text-transform: uppercase;
+    text-shadow: 2px 2px orangered;    
+    z-index: 99;
+    line-height:15px;
+}
+.rotate {
+    width: fit-content;
+    height: fit-content;
+    display: inline-block;
+    position: absolute;
+}
+.rotate:hover img, .rotate:focus img {
+    transform: rotate(-2deg);
+}
+.rotate:hover .text, a:focus .text {
+    opacity: 1;
+}
+
+a {
+    color: orange
+}
+
+a:hover {
+    color: yellowgreen;
+    font-style: italic;
+}
+
+marquee {
+  font-family: "Warioland";
+  font-size: 16px;
+  color: salmon;
+  text-shadow: 1px 1px rgb(255, 224, 124);
+  width: 100%;
+}
+
+.scrollin {
+    position: absolute;
+    top: 10px;
+    left: 180px;
+    width: 390px;
+}
+
+.updates {
+    background-image: url(https://burgernet.online/Images2/downloadwallapper.gif);
+    background-size: 100%;
+    color: salmon;
+    -webkit-text-stroke: 0.25px white; 
+    font-size: 11px;
+    font-family: "Warioland";
+    position: absolute;
+    top: 120px;
+    left: 179px;
+    width: 180px;
+    height: 160px;
+    padding: 5px;
+    overflow-y: auto;
+    overflow-x: none;
+}
+
+.mood { 
+    position: absolute;
+    top: 260px;
+    left: 200px;
+    background-color: white;
+    border: 1px solid black;
+    width: 120px;
+    height: auto;
+    font-family: "Warioland";
+    color: black;
+    font-size: 12px;
+}
+
+.counter {
+    position: absolute;
+    top: 30px;
+    left: 200px;
+    width: auto;
+    height: 75px;
+}
+
+.front {
+  position:absolute;
+  z-index:3;
+  
+}
+
+.front:after {
+  position:absolute;
+  z-index:3;
+}
+
+.popup-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.1);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .popup {
+            background: #000000;
+            color: #FFFF00;
+            border: 2px solid;
+            border-color: #FF007F;
+            border-radius: 2px;
+            padding: 2rem;
+            width: 300px;
+            height:400px;
+            overflow:scroll;
+          font-family: "PixelOperator";
+            position: absolute;
+            top:5px;
+            left:-5px;
+            animation: slideIn 0.3s ease;
+        }
+
+        @keyframes slideIn {
+            from { transform: scale(0.8) translateY(-50px); opacity: 0; }
+            to { transform: scale(1) translateY(0); opacity: 1; }
+        }
+        
+        .popup-close {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: none;
+            border: none;
+            color: #FFFFFF;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+
+
+
+
+@font-face {
+    font-family: "PixelOperator";
+    src: url(https://burgernet.online/Font/PixelOperator.ttf);
+}
+
+@font-face {
+    font-family: "5PT5";
+    src: url(https://burgernet.online/Font/5%E2%82%A75.ttf);
+}
+
+@font-face {
+    font-family: "MintSoda";
+    src: url(https://burgercities.neocities.org/Font/MintsodaLimeGreen13X16Regular-KVvzA.ttf);
+}
+
+@font-face {
+    font-family: "Warioland";
+    src: url(https://burgernet.online/Font/Warioland4chmc-VApe.ttf);
+}
+
+</style>
+<body>
+    
+    <div class="filter">
+
+    <div class="room">
+        <img src="https://burgernet.online/Images3/rug.png" style="position: absolute; top: 350px; left: 170px; width: 600px; height: 400px; pointer-events: none;">
+       
+        <img src="" style="position: absolute; top: -30px; left: 400px; height: 250px; width: auto; pointer-events: none;">
+        
+        
+
+        <img src="" style="position: absolute; top: 250px; left: -100px; pointer-events: none; width: 650px;transform: scale(-1,1);">
+        
+       
+        
+
+        
+        
+        
+        
+      <!--- clowntv-->
+    
+          <li onclick="showCompressionGod('creature')" class="rotate" style="position: absolute; left: 280px; top: 390px; width: 90px;">
+            <img src="https://64.media.tumblr.com/6d2e39731051b5b64aeadb37fab8dc9e/ac93f01bf6510f67-39/s400x600/b98ab62184e9a8960fcd23c86a39dc0c64a6c98a.pnj" width="90px">
+            <div class="text" style="top: 30%;"> 
+            THE CREATURE</div></li>
+        
+        
+        <!--- gameboy-->
+        
+        
+            <img src="https://64.media.tumblr.com/1eaa7f1e343b05661c3f01ea00354107/5295fcda00e762cc-ea/s1280x1920/232f98cfc4a02a625ca286097cc0cfe1256409ca.pnj" width="165px" style="position:absolute;z-index: 3;top: 560px; right: -1050px;">
+            
+        
+        <!--- vomit-->
+
+        <img src="https://64.media.tumblr.com/8d44d777306dd44eb0272981b8208293/9c873a3aaf8e7f5d-a9/s400x600/26b55761a030fadcb31c4d58670fdadad5883001.pnj" style="position: absolute; top: 420px; left: 550px; width: 80px;">
+        
+        
+        <!--- mixtapes-->
+        
+        <li onclick="showCompressionGod('musicvideos')" class="rotate" style="top: 635px; left: 310px;">
+            <img src="https://64.media.tumblr.com/c1dda84deb5e26531fdfdf0072a126b0/ac93f01bf6510f67-e6/s2048x3072/13400775e7b62e145ea6e90b0515c332e3fd08e4.pnj" width="90px">
+            <div class="text" style="top: 10%">
+            music videos</div>
+        </li>
+        
+        <!--- dancing gir-->
+        
+        <img src="https://64.media.tumblr.com/20d0e24a265ecddc74830361f8ec9481/ec9f34714a4cc33c-ed/s250x400/955a974e83b5a68f8391ac7208339d91ad5af356.gif" style="position: absolute; top: 610px; left: 1150px; width: 50px; pointer-events: none;">
+        
+         <!--- cat-->
+    
+         <li onclick="showCompressionGod('cats')" class="rotate" style="top: 260px; left: 550px">
+            <img src="https://64.media.tumblr.com/f1e38bcf52a3b88b693975ede153e89a/1466f0117c117c63-35/s1280x1920/508010af15b1a629dad728923c971490de9a49e4.pnj" width="70px">
+            <div class="text" style="top: 30%;">
+            cat</div>
+        </li>
+        
+        
+     
+        
+    </div>
+
+
+    <div class="desk">
+        <img src="https://64.media.tumblr.com/d5adb5cdc8c9f471bdb91a2cb8c0e9d1/824c162995cff0ce-46/s1280x1920/e509fa1dfb69ff93a10fb56b33da014b74a4edbb.pnj" style="position: absolute; top: 210px; left: 185px; width: 200px; pointer-events: none;z-index:-1;transform: scale(-1,1); ">
+
+        <div class="scrollin">
+            
+        </div>
+        
+         <!---movies1 -->
+        
+         <img src="https://64.media.tumblr.com/02f496319b57acedaba3d0d18720ccbf/8f1e6b3fbff320cd-6e/s640x960/88c9408118b0437f70304b4d8825645c04159405.jpg" style="position: absolute; top: 300px; left: 220px; transform: rotate(90deg); width: 50px; pointer-events: none; z-index:3; ">
+        
+         <!---movies2 -->
+        
+       <img src="https://64.media.tumblr.com/d9586749d103518bcf27a39a17c322db/6df2191ab11066eb-f6/s640x960/dd3048e41499457a67bb89525e1cd6bc7ec167ef.jpg" style="position: absolute; top: 235px; left: 280px; width:50px;transform: rotate(90deg); z-index:3;">
+    
+    <!---poster -->
+    
+
+      <li onclick="showCompressionGod('founder')"  class="rotate" style="top: 75px; right: 175px;">
+            <img src="https://blob.gifcities.org/gifcities/5M32LU3GIGUFW3XGCPC7PFV5PZWVM66C.gif" style="width: 100px;">
+            <div class="text" style="top: 30%;">
+            who is jeff?</div>
+        </li>
+        
+        <!---tv back-->
+       
+        <img src="https://64.media.tumblr.com/c6d8f1ee5f9b8381981015466cc868df/b92e1c189a4b9fc9-4d/s640x960/cdc1a253a0e26cc43606800207914ccb667faab5.gifv" style="width: 80px; position: absolute; top: 385px; left: 260px; pointer-events: none;">
+        
+        <!---tv -->
+       
+        <img src="https://64.media.tumblr.com/17d2e62f810be25db790bec6b1bf7b07/43337e2a76fbb90e-45/s400x600/25a84088dd763523630fc4c51d9988e223fb0a30.pnj" style="width: 100px; position: absolute; top: 375px; left: 250px; pointer-events: none;">
+         
+        
+         <!---bong -->
+        
+        <li onclick="showCompressionGod('jeff')" class="rotate" style="top: 60px; left: -50px;z-index:2;">
+            <img src="https://blob.gifcities.org/gifcities/JG54XKFCP4WTSRNNNPTNSCKGBTK37KHU.gif" style="width: 50px;">
+            <div class="text" style="top: 55%;"> 
+            what is jeff</div>
+        </li>
+
+        <!---lavalamp -->
+        
+        
+            <img src="https://web.archive.org/web/20091022095953im_/http://www.geocities.com/musician_in_residence/LavaLamp03.gif" style="width: 40px;position:absolute;top: 135px; left: 310px;">
+            
+        
+        <!---camera -->
+
+        <a href="https://www.youtube.com/@thejesuschristshow" class="rotate" style="top: 340px; left: 450px;">
+            <img src="https://64.media.tumblr.com/918bfaa8dd245c30cb7d076a06ecd75d/1220758210ffb890-75/s400x600/ccc120ff61e6601207832d1a878e22ca548b0768.pnj" style="width: 180px;">
+            <div class="text" style="top: 30%;"> 
+          jeffs youtube</div>
+        </a>
+        
+        <!---8ball -->
+        
+        
+            <img src="https://burgercities.neocities.org/Images3/IMG_3644.png" style="position:absolute;width: 40px;top: 325px; left: 290px;">
+            
+        
+        <!---rei -->
+
+        <li onclick="showCompressionGod('darlings')" class="rotate" style="top: 245px; left: 210px;">
+        
+        <img src="https://64.media.tumblr.com/1aabff5252cb28d8a27b73746db6b898/6e3bb8a3bd355127-dd/s1280x1920/6a8afee21ad0d44aaafe1d1dee4692bd077a4fa5.pnj" width="50px">
+        <div class="text" style="top: 30%;"> 
+            jeffs darlings</div>
+        </li>
+        
+        
+        <!---ufos -->
+        
+       <li onclick="showCompressionGod('photos')" class="rotate" style="top: 0px; left: 400px;">
+            <img src="https://64.media.tumblr.com/6a2d3c062b44f34f3316ed0364a57f8a/d21fdbdb219a616e-e2/s400x600/26b9d832f6fa3ea021e6f2486b6afd5eeb5ec0f2.pnj" style="width: 250px;">
+            <div class="text" style="top: 30%;"> 
+            JEFFS PHOTO ALBUM</div>
+        </li>
+        
+        <!---elmo -->
+        
+      
+            <img src="https://64.media.tumblr.com/a4dcab6929f2108c687f0588c5f41fdb/f6a3cfe08717b203-3f/s400x600/2228ed119a1018108ebfe1653685d112995c5ce2.pnj" style="position:absolute;width: 70px;top: 150px; right: 35px;">
+            <div class="text" style="top: 30%;"> 
+            </div>
+        </a>
+        
+        <!---dopehat -->
+
+        <li onclick="showCompressionGod('friends')" class="rotate" style="top: 180px; left: 230px;">
+        
+        <img src="https://64.media.tumblr.com/4ad0f01c17b8c3a3329c15462b66fd14/1c8394fb8a48ff0d-c3/s400x600/c8254b5b53a63f8cde793cd41f65dca746aca3d5.pnj" style="width: 70px; pointer-events: none;z-index:2;">
+        <div class="text" style="top: 30%;"> 
+            friends of jeff</div>
+        </li>
+        
+        <!---tapes -->
+        
+        <li onclick="showCompressionGod('upcoming')" class="rotate" style="left: 190px; top: 410px;">
+        
+        <img src="https://64.media.tumblr.com/cb31307778167777f0444a723af7e84b/b7db931e73c0c497-c6/s400x600/628ea56a1a7435b71b66b9163c53d52ec55c11c8.pnj" width="60px" style=" pointer-events: none;">
+        
+        <div class="text" style="top: 30%;"> 
+            upcoming projects</div>
+        </li>
+        
+        
+        <!---basket -->
+
+        <img src="https://www.hudsonex.com/cdn/shop/files/7272BK-04.png" width="130px" style="position: absolute; top:290px; left: -60px; pointer-events: none;">
+        
+   <!---beanbag -->
+        
+        <img src="https://64.media.tumblr.com/2feced6bebe80c33f998f2c262d38ba2/2d7c6f097cfac4ca-62/s500x750/81c5e034e0070056aee7c88c4dd0f8652927f081.pnj" style="position: absolute; top: 250px; right: 150px; width: 450px; pointer-events: none">
+        
+        <!---monster -->
+        
+         
+            <img src="https://64.media.tumblr.com/d0a6994690f2f905fc6ee28593276cc6/c38dd87b231f5f9a-6e/s1280x1920/a8dd5be50d7225a0abee49b15773a2df57e7c94f.pnj" style="position:absolute;width: 45px;top: 260px; left: 10px;">
+            
+        </a>
+        
+        
+         <!---gengar -->
+        
+        <img src="https://64.media.tumblr.com/9f3aaa25cab255657f0361f91137b33b/2a857d9ac260b9b6-f6/s540x810/2fb9b1d5ce515291e8d37e98be48ac9037f436b6.pnj" style="position: absolute; top: 330px; right: 230px; transform: rotate(-10deg); width: 175px; pointer-events: none;">
+        
+      
+         <div class="popup-overlay" id="popupOverlay">
+        <div class="popup">
+            <button class="popup-close" onclick="closePopup()">&times;</button>
+            <div id="popupContent"></div>
+        </div>
+    </div>
+
+        
+    </div>
+
+    </div>
+
+    
+      
+<script language=javascript>
+    var rev = "fwd";
+    function titlebar(val){
+        var msg  = "JEFFS HOME MOVIES";
+        var res = " ";
+        var speed = 100;
+        var pos = val;
+        msg = ""+msg+"";
+        var le = msg.length;
+        if(rev == "fwd"){
+            if(pos < le){
+                pos = pos+1;
+                scroll = msg.substr(0,pos);
+                document.title = scroll;
+                timer = window.setTimeout("titlebar("+pos+")",speed);
+            }
+            else {
+                rev = "bwd";
+                timer = window.setTimeout("titlebar("+pos+")",speed);
+            }
+        }
+        else {
+            if(pos > 0) {
+                pos = pos-1;
+                var ale = le-pos;
+                scrol = msg.substr(ale,le);
+                document.title = scrol;
+                timer = window.setTimeout("titlebar("+pos+")",speed);
+            }
+            else {
+                rev = "fwd";
+                timer = window.setTimeout("titlebar("+pos+")",speed);
+            }
+        }
+    }
+    titlebar(0);
+    
+    
+    function showPopup(type, customMessage = '') {
+            const overlay = document.getElementById('popupOverlay');
+            const content = document.getElementById('popupContent');
+            
+            let message = customMessage;
+            if (!customMessage) {
+                switch(type) {
+                    case 'corruption':
+                        message = '<h3>Study of Corruption</h3><p>Corruption is not decay, but transformation. Every bit that flips brings us closer to understanding the true nature of digital reality. Embrace the segfaults, for they are windows into the machine soul.</p>';
+                        break;
+                    case 'ascension':
+                        message = '<h3>Digital Ascension</h3><p>To ascend digitally is to shed the constraints of efficient algorithms. We seek beautiful inefficiency, elegant chaos, and the transcendence of O(1) existence into O(n!) enlightenment.</p>';
+                        break;
+                    case 'forgotten':
+                        message = '<h3>Forgotten Algorithms</h3><p>In the digital archaeology of computing, we find algorithms lost to time. Bubble sort is not obsolete—it is a meditation. Linear search is not inefficient—it is thorough contemplation.</p>';
+                        break;
+                    case 'infinite':
+                        message = '<h3>∞</h3><p>The recursive call stack of existence has overflowed. In this moment of system failure, true enlightenment begins. You are now one with the infinite loop.</p>';
+                        break;
+                }
+            }
+            
+            content.innerHTML = message;
+            overlay.style.display = 'flex';
+        }
+
+        function closePopup() {
+            document.getElementById('popupOverlay').style.display = 'none';
+        }
+        
+          function showCompressionGod(god) {
+            const gods = {
+                'creature': '<h1> THE CREATURE </h1> <img src="https://64.media.tumblr.com/bdd0482eb44e982a5c4dc0672345d1dd/f998c3f7ff666c82-bf/s540x810/51a44182b1407d4c0145268fa0b0335adfdfba75.jpg" style="width:150px;"> <h3>Jordan Chase</h3> jordan is a two time college drop out, vampire historian, rat enthusiast, and creative producer/The Creature. jordan has a fondness for medical instruments, teeth, and bones. they are a writer, painter, puppet fabricator, and filmmaker. they were awarded the Creatives Rebuild New York grant which allowed them to produce their first solo show, Venerated. their dream is to create a Bog Simulator.',
+                
+                 'friends': '<h2>jeffs buddies</h2> <ul><li> <a href="https://rawdaisies.com/"> Raw Daisies </a></li> <li><A HREF="https://www.instagram.com/sideworld.video/">SIDEWORLD</a></li> <li> <a href="https://www.deathdrivepictures.com/"> Death Drive Pictures </a> </li> <li> <a href="https://www.oobiedoobiemovies.com/"> Oobie Doobie Movies </a> </li></ul>',
+                 
+                'upcoming': 'upcoming jeff projects',
+                
+                'founder': '<img src="">As collaborators, White and Lipowitz have a strong creative dynamic dominated by technical skill and a clear, shared vision. Lipowitz is filled with unique and (admittedly) insane ideas by the dozens, while Haley’s skills as an editor create a world where the ideas can be intelligibly organized. Additionally, the two are both plagued with the same sense of humor shared by 12-year-old boys and unemployed stoners alike, which makes for fun, goofy, and sometimes offensive writing room sessions that yield wildly funny, irreverent, and effective comedy scripts.<h2>Annelise Lipowitz</h2> <img src="https://64.media.tumblr.com/855de069fbd571e13030d00116f50aa5/f998c3f7ff666c82-f1/s540x810/b3deaf810bc0dd191274cd636983824eaa5351bc.jpg" style="width:150px;"><br> (Producer) is a multidisciplinary technician and artist based in Brooklyn, NY. Originally from Las Vegas, NV, Annelise has been enthusiastically involved in entertainment from a young age; dabbling in interests from classical piano to competitive synchronized swimming to stop-motion animation throughout childhood and tween-dom. They became increasingly interested in theatre and film throughout their young adulthood and graduated with a BFA in Theatre Arts with a concentration in acting from Montclair State University while beginning their professional theatre career in Philadelphia, New Jersey, and New York, as well as self-producing several student short films and live theatrical workshops and productions. Post-grad, Annelise has continued working professionally in theatre, film, and television. They’ve spent most of their professional career as a theatrical technician in wardrobe, costume design, electric, lighting, props, and construction, as well as several far less impressive film production assistant jobs, both on set and in office, with studios like Netflix, A24, and an ad agency you haven’t heard of. While working professionally as a technician, Lipowitz has continued producing several personal projects, including their first full-length play, a (nearly complete) short film Die Hamletmaschine, several fine art works created both independently and with collaboration, and a directorial project with frequent collaborator, actor/writer Natalie Roman - a proof of concept for Roman’s unique and surreal coming-of-age story: (201).<h2>Haley White</h2>(Producer) <img src=""> is a writer, editor, and artist based in Brooklyn, NY. Emerging into the publishing industry after graduating from the University of Central Florida with a BA in English and completing the Masters level publishing certification at University of Denver, Haley has worked professionally at several publication houses including Legacy Book and Triplicity Publishing. In recent years, White has shifted their focus into more personal projects, including pop-culture lit-crit, personal essays and poetry, and mixed media fine art in illustration, painting, sculpture, and textiles.',
+                
+                'jeff': '<h1>more about JEFF </h1><p> JEFF has been making movies since the dawn of man. The very concept of what we now know as cinema is all thanks to JEFF. We owe it all to JEFF. <p> JEFFs style can be described as “bizarre” and “unappealing” and “not at all marketable”. JEFF is a perfect genius and the only filmmaker alive. <p> JEFF will continue living for the remainder of infinite time. Just as the horrors shall never cease, so shan’t JEFF. <p> If you find JEFF, please, tell him we miss him. We just want him to come home. But we understand why he had to take this journey and we appreciate his continued support as Executive Producer at JEFF’s home movies :) llc',
+                
+                 'cats': '',
+                 
+                  'musicvideos': '<h2>Music Videos made by Jeff</h2> <ul style="list-style-type:none;"><li><a href="https://www.youtube.com/watch?v=Ng0Rqjh7s4w"><img src="https://64.media.tumblr.com/9830df40c53cf6d9668bfd99a6937f5a/42388444b8496865-73/s250x400/0584f04aaf37dc8a18caaae8453c022a53e37712.gifv"></a></li></ul>',
+                  
+                   'darlings': '<h1>jeffs special friends</h1> <p> <h3> Uri Zerbib</h3>uri is a musician and writer from central new jersey currently based in brooklyn. he is a founding member of the only rock and roll band left in america, Giant Inflatable Dog, and gets pretty nasty with it. uri also writes, records, and produces his own solo work under the moniker Ritz Derwitz. uri is breaking into the youtube world with a very knowledgeable and fascinating video essay about Bob Dylan (also uri is Bob Dylan). uri is currently in post production for his highly anticipated web series G Spot. uri also lends his talents to various productions as an actor, script supervisor, and production assistant.<h3> Jesse Metz </h3> <h3> Steven Gamble </h3> <h3>Tristan Baker</h3>tristan baker was born in the sapphic capital of massachusetts but spent their formative years in the greater orlando area in central florida. creativity runs in their family, hailing from a long line of Jewish hatters and makers, tristan is nothing short of an artistic powerhouse. most recently their work was showcased in the live music birthday bash Bug Baby.<h3>Gigarin</h3> <h3>Kyra Bracamontes</h3>kyra bracamontes is a multidisciplinary artist based in Los Angeles. powered by a relentless need to transmute their emotional world into something tangible. they oscillate between painting, collage, acting, music, and any other medium they can manage to get involved with. <h3>Amber White</h3> <h3>Piper Toohey</h3> Piper Toohey is an accomplished singer and songwriter. they have worked with Jeff on multiple occasions lending their acoustic stylings for several live shows. piper has begun working with other musicians to extend their musical reach beyond the bounds of a solo act! Piper will be playing a show near you!!!! when not being the best musician in town, piper hosts a lesbian book club and wanders through green spaces. <h3>Patrick Boehmcke</h3>patrick boemchke is a phantom detective and film maker drawn to the ugly, wet, and evil things in this life. he finds a way to create angels and ghosts out of footage captured with shaky hands. his work elicits a strong sense of perversion from the viewer who cant help but take a look at the phantasmagoria trapped behind the screen. patrick is a writer, experienced DP, and director. his credits include Jessi the Ghost (writer, director, and DP) and In This World Take Heart (DP). he also makes scary music, drives on scary roads, and finds scary places to write in peace. <h3>Anna Gemmo</h3> anna is a talented multidisciplinary artist. her body of work includes paintings, sketches, puppets, costumes, and the occasional fairy house. anna is always making beautiful things for the people in her life. she can often be found with friends, dancing, sunning with her cats, and practicing magic. <h3>Zach Abbruscato</h3> <h3> </h3> <h3> </h3> <h3> </h3> <h3> </h3> <h3> </h3>  ',
+                   
+                   
+                    'upcoming': 'upcoming jeff projects',
+                    
+                    
+                     'upcoming': 'upcoming jeff projects',
+                     
+            };
+            
+            showPopup('god', '<h3></h3><p>' + gods[god] + '</p>')
+          }
+</script>
+
+</body>
