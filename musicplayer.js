@@ -30,7 +30,7 @@ var songlist = {
                     "artist": "dilbert",
                     "album": "jeff's favs",
                     "duration": "04:01",
-                    "url": "https://files.catbox.moe/0rnm28.mp3",
+                    "url": "assets/Dilbert 2.mp3",
                     "cover_art_url": "/3-Assets/Images/AlbumCovers/oingo_boingo_unreleased.jpg"
                 }, //1
                 {
@@ -38,7 +38,7 @@ var songlist = {
                     "artist": "enrique iglesias",
                     "album": "escape",
                     "duration": "04:23",
-                    "url": "https://files.catbox.moe/59itm4.mp3",
+                    "url": "assets/911 Tribute (Enrique Iglesias- Hero with background voices).mp3",
                     "cover_art_url": "/3-Assets/Images/AlbumCovers/mange_tout.jpg"
                 }, //2
                 {
@@ -46,7 +46,7 @@ var songlist = {
                     "artist": "hank",
                     "album": "bobby in the flesh",
                     "duration": "04:02",
-                    "url": "https://files.catbox.moe/ks6nd6.mp3",
+                    "url": "assets/Hank of the Hill (Re-Upload).mp3",
                     "cover_art_url": "/3-Assets/Images/AlbumCovers/so-lo.jpg"
                 }, //3
                 {
@@ -54,7 +54,7 @@ var songlist = {
                     "artist": "reel big fish",
                     "album": "turn the radio off",
                     "duration": "02:24",
-                    "url": "https://files.catbox.moe/37kpil.mp3",
+                    "url": "assets/Reel big fish - Trendy.mp3",
                     "cover_art_url": "/3-Assets/Images/AlbumCovers/in_no_sense_nonsense.jpg"
                 }, //4
                 {
@@ -62,7 +62,7 @@ var songlist = {
                     "artist": "katy perry",
                     "album": "teenage dream",
                     "duration": "03:54",
-                    "url": "https://files.catbox.moe/rdxvqi.mp3",
+                    "url": "assets/Plastic Bag by Katy Perry.mp3",
                     "cover_art_url": "/3-Assets/Images/AlbumCovers/human_racing.jpg"
                 }, //5
                 {
@@ -70,7 +70,7 @@ var songlist = {
                     "artist": "silly stu",
                     "album": "stus silly stunes",
                     "duration": "01:05",
-                    "url": "https://files.catbox.moe/aahr80.mp3",
+                    "url": "assets/McDonald's in the Pentagon.mp3",
                     "cover_art_url": "/3-Assets/Images/AlbumCovers/new_toy.jpg"
                 }, //6
                 {
@@ -94,7 +94,7 @@ var songlist = {
                     "artist": "taylor swift",
                     "album": "fearless",
                     "duration": "04:05",
-                    "url": "https://files.catbox.moe/qwaoni.mp3",
+                    "url": "assets/Slipknot - Psychosocial [OFFICIAL VIDEO] [HD].mp3",
                     "cover_art_url": "/3-Assets/Images/AlbumCovers/dead_mans_party.jpg"
                 }, //9
                 {
@@ -102,7 +102,7 @@ var songlist = {
                     "artist": "sublime",
                     "album": "sublime",
                     "duration": "03:33",
-                    "url": "https://files.catbox.moe/6dvo6k.mp3",
+                    "url": "assets/Sublime - Caress Me Down.mp3",
                     "cover_art_url": "/3-Assets/Images/AlbumCovers/shout.jpg"
                 }, //10
                 {
@@ -110,7 +110,7 @@ var songlist = {
                     "artist": ".......",
                     "album": "............",
                     "duration": "49:32",
-                    "url": "https://files.catbox.moe/ic6gnt.mp3",
+                    "url": "assets/My name is Jeff.mp3",
                     "cover_art_url": "/3-Assets/Images/AlbumCovers/oingo_boingo_unreleased.jpg"
                 }, //11
                 {
@@ -118,7 +118,7 @@ var songlist = {
                     "artist": "i cant get to sleep",
                     "album": "i think about the implications",
                     "duration": "03:46",
-                    "url": "https://files.catbox.moe/h53a9r.mp3",
+                    "url": "assets/Men At Work - Overkill (Video Version).mp3",
                     "cover_art_url": "/3-Assets/Images/AlbumCovers/form_and_control.jpg"
                 } //12
               ]
